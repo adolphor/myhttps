@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN" monitorInterval="30">
+
+  <Properties>
+    <Property name="logPattern">[%d{yyyy-MM-dd HH:mm:ss} %-5p] %-4relative [%thread] %c.%M(%L): %m%n</Property>
+  </Properties>
+
+  <appenders>
+    <console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="${logPattern}"/>
+    </console>
+  </appenders>
+
+  <loggers>
+    <root level="DEBUG">
+      <appender-ref ref="Console"/>
+      <appender-ref ref="DEBUG"/>
+      <appender-ref ref="INFO"/>
+      <appender-ref ref="WARN"/>
+      <appender-ref ref="ERROR"/>
+    </root>
+  </loggers>
+</configuration>
